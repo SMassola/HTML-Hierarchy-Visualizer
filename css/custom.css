@@ -1,0 +1,19 @@
+.header {
+  font-weight: bolder;
+  font-size: 24px;
+  font-family: sans-serif;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.button {
+  font-family: sans-serif;
+  min-width: 100px;
+  min-height: 50px;
+  margin: 5px;
+  border: 2px solid black;
+  color: black;
+  background:none!important;
+  font: inherit;
+  cursor: pointer;
+}

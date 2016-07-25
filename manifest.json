@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+
+  "name": "HTML Hierarchy Visualizer",
+  "description": "This extension is a tool that helps visualize the layout of HTML elements on a webpage",
+  "version": "0.0.0.2",
+
+  "browser_action": {
+     "default_icon": "./images/icon.png",
+     "default_popup": "popup.html"
+  },
+
+  "permissions": [
+    "activeTab"
+  ],
+
+  "web_accessible_resources": ["colors.css"]
+}
