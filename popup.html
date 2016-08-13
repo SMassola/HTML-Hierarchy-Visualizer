@@ -2,13 +2,30 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="./css/custom.css">
-    <script type="text/javascript" src="popup.js"></script>
   </head>
   <body>
-    <center class="header">HTML Hierarchy Visualizer</center>
-    <button class="button" id="applyBackground">Apply Backgrounds!</button>
-    <button class="button" id="applyBorder">Apply Borders!</button>
-    <button class="button" id="removeBackground">Remove Backgrounds!</button>
-    <button class="button" id="removeBorder">Remove Borders!</button>
+    <div class="container">
+      <div class="header">
+        <img class="icon" src="./images/icon19.png">
+        <div class="title">HTML Hierarchy Visualizer</div>
+      </div>
+      <div class="description">
+        This extension is a tool that helps the user visualize the layout of
+        HTML elements on a webpage by applying colored backgrounds or borders
+      </div>
+      <div class="interactive">
+        <div class="explanation">
+          The different colors represent the depth of the HTML element in the
+          DOM tree. Starting from red and continuing through the visible light
+          spectrum
+        </div>
+        <div class="button-container">
+          <button class="button" id="Background">Apply Backgrounds!</button>
+          <button class="button" id="Border">Apply Borders!</button>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="popup.js"></script>
+    <script type="text/javascript" src="background.js"></script>
   </body>
 </html>

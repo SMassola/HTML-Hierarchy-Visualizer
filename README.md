@@ -7,22 +7,33 @@ to get a sense of how the page was designed. It is written in pure Javascript.
 
 ## Features
 * Add or remove colored borders around HTML elements at the click of a button
-![background](./images/background.png)
+![background](./images/BackgroundPreview.png)
 * Add or remove colored backgrounds around HTML elements at the click of a button
-![border](./images/border.png)
+![border](./images/BorderPreview.png)
 
 ## Implementation
 HTML Hierarchy Visualizer combines HTML, CSS and Javascript.
 
 * Executes different scripts depending on the DOM element pressed by the user
 ```javascript
-function handleApplyBackgroundClick() {
-  document.getElementById("applyBackground").removeEventListener('click', handleApplyBackgroundClick);
-  chrome.tabs.query({"active": true, "currentWindow": true}, handleApplyBackgroundScript);
+function handleBackgroundClick() {
+  if (displayBackground) {
+    displayBackground = false;
+    document.getElementById("Background").innerHTML = "Apply Backgrounds!";
+    chrome.tabs.query({"active": true, "currentWindow": true}, handleRemoveBackgroundScript);
+  } else {
+    displayBackground = true;
+    document.getElementById("Background").innerHTML = "Remove Backgrounds!";
+    chrome.tabs.query({"active": true, "currentWindow": true}, handleApplyBackgroundScript);
+  }
 }
 
 function handleApplyBackgroundScript(tab) {
   chrome.tabs.executeScript(null, {file: "./javascript/apply_background.js"});
+}
+
+function handleRemoveBackgroundScript(tab) {
+  chrome.tabs.executeScript(null, {file: "./javascript/remove_background.js"});
 }
 ```
 
