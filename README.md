@@ -7,9 +7,9 @@ to get a sense of how the page was designed. It is written in pure Javascript.
 
 ## Features
 * Add or remove colored borders around HTML elements at the click of a button
-![background](./images/BackgroundPreview.png)
-* Add or remove colored backgrounds around HTML elements at the click of a button
 ![border](./images/BorderPreview.png)
+* Add or remove colored backgrounds around HTML elements at the click of a button
+![background](./images/BackgroundPreview.png)
 
 ## Implementation
 HTML Hierarchy Visualizer combines HTML, CSS and Javascript.
